@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[54]:
+# In[7]:
 
 
 import dash
@@ -118,13 +118,12 @@ app.layout = html.Div([
             dcc.Input(id='r2', type='number', placeholder='r2'),
             dcc.Input(id='r2range', type='number', placeholder='r2range'),
         ], style={'padding': 10}),
-    
+        ]),
     html.Br(),
     html.Button('Submit', style=disabled_button_style, id='submit-button', n_clicks=0, disabled=True),
     html.Br(),
     html.Div(id='graph-container', style={'display': 'none'}, children=[dcc.Graph(id='output-data-plot')]),
     html.Div(id='message-output', style={'margin': '20px', 'padding': '10px', 'border': '1px solid #ddd'})
-    ])
 ], style = styles)
 
 @app.callback(
